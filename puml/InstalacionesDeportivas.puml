@@ -1,0 +1,44 @@
+~~~
+@startuml Instalaciones Deportivas
+'https://plantuml.com/class-diagram
+
+skinparam classAttributeIconSize 0
+
+enum Material << enumeration >> {
+    balon
+    red
+    raquetas
+}
+
+enum Instalacion << enumeration >> {
+    piscina
+    fronton
+    Gym
+    pista de tenis
+}
+
+Polideportivo "0..1" -- "0..*" Socio
+(Polideportivo, Socio).. Reserva
+
+class Polideportivo {
+    - tipo : Instalacion
+}
+
+class Socio {
+    - nombre : String
+    - direccion : String
+    - ciudad : String
+    - provincia : String
+    - telefono : int
+    - cuota : int
+}
+
+class Reserva {
+    - fecha : date
+    - horaInicio : int
+    - horaFin : int
+    - extras : material
+}
+
+@enduml
+~~~
