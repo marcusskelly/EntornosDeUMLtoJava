@@ -1,5 +1,7 @@
 package biblioteca;
 
+import java.util.List;
+
 /**
  * La clase <code>Copia</code> define un tipo de <code>Libro</code>
  * @author Marcus Skelly
@@ -27,11 +29,11 @@ public class Copia extends Libro{
      * @param referencia
      * @param estado
      */
-    public Copia(String titulo, String editorial, int year, Genero tipo,int referencia,EstadoCopia estado) {
+    public Copia(String titulo, String editorial, int year, Genero tipo, int referencia, EstadoCopia estado, List<Copia> numCopias) {
         /**
          * Mediante la palabra clave super, accedemos a los atributos de libro de la clase madre
          */
-        super(titulo, editorial, year, tipo);
+        super(titulo, editorial, year, tipo,numCopias);// como copia hereda de libro, me pide el array list
         this.referencia = referencia;
         this.estado = estado;
     }
@@ -41,8 +43,5 @@ public class Copia extends Libro{
      * Clase Prestamo alojada en copia, detalla las fechas de un prestamo realizado por un socio de la biblioteca a una copia especifica
      */
 
-    public class Prestamo{
-        public int fechaInicio;
-        public int fechaFin;
-    }
+
 }
