@@ -1,5 +1,7 @@
 package biblioteca;
 
+import java.util.List;
+
 /**
  * La clase <code>Libro</code> alberga los atributos de Libro del paquete biblioteca.
  * de ella pueden heredar otras clases
@@ -18,6 +20,7 @@ public class Libro {
     private String editorial;
     private int year;
     private Genero tipo;
+    private List<Copia>numCopias;
 
     /**
      * Constructor con todos los atributos:
@@ -27,11 +30,12 @@ public class Libro {
      * @param tipo
      */
 
-    public Libro(String titulo, String editorial, int year, Genero tipo) {
+    public Libro(String titulo, String editorial, int year, Genero tipo,List<Copia>numCopias) {
         this.titulo = titulo;
         this.editorial = editorial;
         this.year = year;
         this.tipo = tipo;
+        this.numCopias = numCopias;
     }
 
     public String getTitulo() {

@@ -1,5 +1,7 @@
 package biblioteca;
 
+import java.util.List;
+
 /**
  * La clase <code>Socio</code> incluye los atributos de un socio de la biblioteca, además de los prestamos realizados y las multas recibidas
  * @author Marcus Skelly
@@ -19,6 +21,12 @@ public class Socio {
     private String telefono;
 
     /**
+     * El numero de multas que tiene un socio
+     */
+
+    private List<Multa>numMultas;
+
+    /**
      * Constructor con todos los atributos:
      * @param numero
      * @param nombre
@@ -26,11 +34,12 @@ public class Socio {
      * @param telefono
      */
 
-    public Socio(int numero, String nombre, String direccion, String telefono) {
+    public Socio(int numero, String nombre, String direccion, String telefono,List<Multa>numMultas) {
         this.numero = numero;
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
+        this.numMultas = numMultas;
     }
 
     /**
