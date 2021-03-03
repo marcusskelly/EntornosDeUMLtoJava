@@ -18,4 +18,51 @@ public class Libro {
     private String editorial;
     private int year;
     private Genero tipo;
+
+    /**
+     * Constructor con todos los atributos:
+     * @param titulo
+     * @param editorial
+     * @param year
+     * @param tipo
+     */
+
+    public Libro(String titulo, String editorial, int year, Genero tipo) {
+        this.titulo = titulo;
+        this.editorial = editorial;
+        this.year = year;
+        this.tipo = tipo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public Genero getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Genero tipo) {
+        this.tipo = tipo;
+    }
 }

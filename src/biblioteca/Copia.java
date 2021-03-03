@@ -1,7 +1,7 @@
 package biblioteca;
 
 /**
- * La clase <codeCopia</code> define un tipo de <code>Libro</code>
+ * La clase <code>Copia</code> define un tipo de <code>Libro</code>
  * @author Marcus Skelly
  * @see Libro
  * @version 1.0
@@ -16,6 +16,30 @@ public class Copia extends Libro{
      */
     private int referencia;
     private EstadoCopia estado;
+
+    /**
+     * Constructor con todos los atributos:
+     *
+     * @param titulo
+     * @param editorial
+     * @param year
+     * @param tipo
+     * @param referencia
+     * @param estado
+     */
+    public Copia(String titulo, String editorial, int year, Genero tipo,int referencia,EstadoCopia estado) {
+        /**
+         * Mediante la palabra clave super, accedemos a los atributos de libro de la clase madre
+         */
+        super(titulo, editorial, year, tipo);
+        this.referencia = referencia;
+        this.estado = estado;
+    }
+
+
+    /**
+     * Clase Prestamo alojada en copia, detalla las fechas de un prestamo realizado por un socio de la biblioteca a una copia especifica
+     */
 
     public class Prestamo{
         public int fechaInicio;
