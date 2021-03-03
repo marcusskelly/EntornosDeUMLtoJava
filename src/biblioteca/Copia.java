@@ -1,5 +1,13 @@
 package biblioteca;
 
+/**
+ * La clase <codeCopia</code> define un tipo de <code>Libro</code>
+ * @author Marcus Skelly
+ * @see Libro
+ * @version 1.0
+ * @since 1.0
+ */
+
 public class Copia extends Libro{
 
     /**
@@ -8,4 +16,9 @@ public class Copia extends Libro{
      */
     private int referencia;
     private EstadoCopia estado;
+
+    public class Prestamo{
+        public int fechaInicio;
+        public int fechaFin;
+    }
 }
