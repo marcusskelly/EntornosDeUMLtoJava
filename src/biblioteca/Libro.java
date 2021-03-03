@@ -8,5 +8,8 @@ package biblioteca;
  * @since 1.0
  */
 public class Libro {
-
+    private String titulo;
+    private String editorial;
+    private int year;
+    private Genero tipo;
 }
